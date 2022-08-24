@@ -1,6 +1,6 @@
 ============== Readme description for Matlab codes =============================
 
-This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper "Robust estimation in regression and classi cation methods for large dimensional data". 
+This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper "Robust estimation in regression and classification methods for large dimensional data". 
 Matlab codes for all other tables and figures can be similarly and manually adjusted.
 
 All Matlab codes are located in the same directory.
