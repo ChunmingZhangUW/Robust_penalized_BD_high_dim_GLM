@@ -52,45 +52,6 @@ if     family == 0 && strcmpi(link, 'iden')
     % Gaussian responses, identity link
 
     mu = theta;
-    %
-    %     residual = y - mu;
-    %
-    %     %---------------------------------------------------------------------
-    %     if     options.choice_of_Gaussian_sigma2_in_robust_p_1_p_2_BD_for_hat_V_n == 1
-    %         % MAD (robust method)
-    %
-    %         median_residual= median(residual);
-    %
-    %         hat_sigma = median(abs(residual-median_residual))/0.6745;
-    %         hat_sigma2_MAD = hat_sigma^2;
-    %
-    %         hat_sigma2 = max(hat_sigma2_MAD);
-    %
-    %     elseif options.choice_of_Gaussian_sigma2_in_robust_p_1_p_2_BD_for_hat_V_n == 2
-    %         % max(MSE, MAD)
-    %
-    %         median_residual= median(residual); square_residual = residual.^2;
-    %
-    %         hat_sigma = median(abs(residual-median_residual))/0.6745;
-    %         hat_sigma2_MAD = hat_sigma^2;
-    %
-    %         hat_sigma2_MSE = mean(square_residual);
-    %
-    %         hat_sigma2_Median_SE = median(square_residual);
-    %
-    %         hat_sigma2 = max([hat_sigma2_Median_SE, hat_sigma2_MSE, ...
-    %             hat_sigma2_MAD]);
-    %
-    %     elseif options.choice_of_Gaussian_sigma2_in_robust_p_1_p_2_BD_for_hat_V_n == 3  % specified
-    %
-    %         disp(' --> enter robust_true_pp.m: for Gaussian with specified sigma2')
-    %         hat_sigma2 = options.specified_robust_p_1_p_2_BD_Gaussian_sigma2;
-    %
-    %     else
-    %         disp('!!! robust_true_pp.m: hat_Gaussian_sigma2 is undefined.')
-    %         return
-    %     end
-    %     %---------------------------------------------------------------------
 
     if     options.choice_of_estimating_sigma2_inside_iteration_robust_BD == 0
         % estimate sigma^2 outside iterations
@@ -130,40 +91,6 @@ elseif family == 21 && strcmpi(link, 'log')
     theta(theta >  options.BD_C) =  options.BD_C;
 
     mu = exp(theta);
-    %
-    %     residual = y - mu;
-    %
-    %     %---------------------------------------------------------------------
-    %     Poisson_a_UB = min(( (10^15-mu)/c_tune_constant ).^2./mu);
-    %     square_residual = residual.^2;
-    %
-    %     if     options.choice_of_Poisson_phi_in_robust_p_1_p_2_BD_for_hat_V_n == 1
-    %
-    %         hat_Poisson_phi = min([...
-    %             mean(square_residual.*mu)/mean(mu.^2), ...
-    %             Poisson_a_UB, options.Poisson_variance_a_UB]);
-    %
-    %     elseif options.choice_of_Poisson_phi_in_robust_p_1_p_2_BD_for_hat_V_n == 2
-    %
-    %         hat_Poisson_phi = min([max([...
-    %             median(square_residual./mu), ...
-    %             mean(square_residual./mu) ...
-    %             ]), ...
-    %             Poisson_a_UB, options.Poisson_variance_a_UB]);
-    %
-    %     elseif options.choice_of_Poisson_phi_in_robust_p_1_p_2_BD_for_hat_V_n == 3  % specified
-    %         % applicable to the genuine Poisson responses with phi = 1
-    %
-    %         %disp(' --> enter robust_true_pp.m: for Poisson with specified phi')
-    %         hat_Poisson_phi = options.specified_Poisson_phi_in_robust_p_1_p_2_BD_for_hat_V_n;
-    %
-    %     else
-    %         disp('!!! robust_true_pp.m: hat_Poisson_phi is undefined.')
-    %         return
-    %     end
-    %
-    %     Poisson_phi = hat_Poisson_phi;
-    %     %---------------------------------------------------------------------
 
     hat_Poisson_phi = hat_phi_of_overdispersed_Poisson_data_in_robust_BD(...
         I_loss, family, link, theta, y, options, c_tune_constant);

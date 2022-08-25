@@ -894,49 +894,10 @@ elseif options.general_formula_robust_p_1_p_2_BD_for_hat_V_n == 0
             results.P_22_2_vector = P_22_2_vector; % \sqrt{V(u)} Delta_2(u) u
         end
 
-        % else
-        %     sqrt_V_original = sqrt(V_original);
-        %     sqrt_V_modified = max(options.zero_thres, sqrt_V_original);
-        %
-        %     r_y_mu = residual./sqrt_V_modified;  % Pearson_residual
-        %
-        %     psi      = robust_rho_function(r_y_mu, index_robust_c, ...
-        %         choice_rho_function, c_tune_constant, 1);
-        %     % 1st derivative of Huber func.
-        %     psi_prime_r_y_mu = robust_rho_function(r_y_mu, index_robust_c, ...
-        %         choice_rho_function, c_tune_constant, 2);
-        %     % 2nd derivative of Huber func.
-        %
-        %     deri_1_G_1 = G_1(mu, sqrt_V_original, sqrt_V_modified, family, options, ...
-        %         index_robust_c, c_tune_constant, 1);
-        %     psi_c_minus_deri_1_G_1 = psi - deri_1_G_1;
-        %
-        %     deri_2_G_1 = G_1(mu, sqrt_V_original, sqrt_V_modified, family, options, ...
-        %         index_robust_c, c_tune_constant, 2);
-        %
-        %     p_1_vector = (psi_c_minus_deri_1_G_1).*deri_2_q.*sqrt_V_original./deri_1_F;
-        %
-        %     %---------------------------
-        %     deri_r = -(V + residual.*deri_V/2)./(sqrt_V_modified.*V_modified);
-        %     deri_psi_c_multiply_deri_r = psi_prime_r_y_mu.*deri_r; % \psi'(r)r'(u)
-        %     f_1 = (deri_psi_c_multiply_deri_r - deri_2_G_1).*deri_2_q.*sqrt_V_original ...
-        %         ./deri_1_F;
-        %     f_2 = (psi_c_minus_deri_1_G_1).*...
-        %         ( (deri_3_q.*sqrt_V_original+deri_2_q.*deri_V./sqrt_V_modified/2) ...
-        %         .*deri_1_F - deri_2_q.*sqrt_V_original.*deri_2_F )./(deri_1_F.^2);
-        %
-        %     p_2_vector = (f_1 + f_2)./deri_1_F;
     end
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% p_2_vector = p_2_vector + (p_2_vector == 0)*options.delta + ...
-%     sign(p_2_vector)*options.delta;
-% This makes problems to
-% robust_LARS_parametric_BD_estimate_SCAD_LLA_general.m.
-
-%p_2_vector = max(p_2_vector, options.delta);  % set to be >= options.delta
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 if any(isempty(p_1_vector)) == 1

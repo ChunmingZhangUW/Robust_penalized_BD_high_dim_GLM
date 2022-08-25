@@ -12,7 +12,6 @@ function [p_1_vector, p_2_vector, results] = robust_p_1_p_2_BD(...
 % Loss    : deviance loss, exponential loss, quadratic loss,
 %           quasi-likelihood
 % Link F  : the canonical link function
-% Used in : LARS algorithm
 % Called  : q_1_q_2_BD.m, robust_p_1_p_2_BD_for_hat_V_n.m
 %--------------------------------------------------------------------------
 % <Input>

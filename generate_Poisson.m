@@ -81,14 +81,9 @@ if family == 21 % Poisson_quasi
             design_matrix(7, 10) =  a * sign(U(7)-0.5);
             %y_vector(7) = -10*sign(U(7)-0.5);
 
-            %y_vector(1:10) = y_vector(1:10).*(y_vector(1:10) > 100) + 500/5.*(y_vector(1:10) <= 100);
-            %y_vector(1:8) = y_vector(1:8).*(y_vector(1:8) > 100) + 100/2.*(y_vector(1:8) <= 100);
-            % %version of 11/12/2012
-
             y_vector(1:8) = ...
                 y_vector(1:8) .* (y_vector(1:8) >  100) + ...
                 A             .* (y_vector(1:8) <= 100);
-            % version in 07/??/2013
         else
             disp(' wrong, stop'); return
         end
@@ -100,29 +95,7 @@ if family == 21 % Poisson_quasi
             return
 
         elseif study == 2
-            U = rand(num_obs, 1);
-
-            a = 3;
-
-            design_matrix(1,  2) =  a * sign(U(1)-0.5);
-            %y_vector(1) =  10*sign(U(1)-0.5);
-            design_matrix(2,  3) =  a * sign(U(2)-0.5);
-            %y_vector(2) = -10*sign(U(2)-0.5);
-            design_matrix(3,  4) =  a * sign(U(3)-0.5);
-            %y_vector(3) =  10*sign(U(3)-0.5);
-            design_matrix(4,  6) =  a * sign(U(4)-0.5);
-            %y_vector(4) = -10*sign(U(4)-0.5);
-            design_matrix(5,  8) =  a * sign(U(5)-0.5);
-            %y_vector(5) = -10*sign(U(5)-0.5);
-            design_matrix(6,  9) =  a * sign(U(6)-0.5);
-            %y_vector(6) = -10*sign(U(6)-0.5);
-            design_matrix(7, 10) =  a * sign(U(7)-0.5);
-            %y_vector(7) = -10*sign(U(7)-0.5);
-
-            y_vector(1:10) = ...
-                y_vector(1:10) .* (y_vector(1:10) >  100) + ...
-                500            .* (y_vector(1:10) <= 100);
-            %y_vector(1:8) = y_vector(1:8).*(y_vector(1:8) > 100) + 100/2.*(y_vector(1:8) <= 100);
+            % add contaminated data
 
         else
             disp(' wrong, stop'); return

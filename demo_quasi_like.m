@@ -49,7 +49,7 @@ misclass_Ber = [];
 
 disp(' ')
 
-options.CD_LARS = 1; % input(' input method (1: CD; 2: LARS) for penalized estimation = ');
+options.CD_LARS = 1; % method (1: CD) for penalized estimation
 
 lambda_method = 0; % input(' input method (0: tuning set; 1: CV) for selecting lambda = ');
 

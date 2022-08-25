@@ -177,7 +177,7 @@ while converge == false && iter <= options.maxit && ...
             change = (norm(beta_new - hat_beta) > options.thresh_1);
         end
 
-    elseif options.GLM_BD_parameter_estimate == 23 % (Xiao Guo's version)
+    elseif options.GLM_BD_parameter_estimate == 23 % 
         % coordinate descent algorithm, with q_1_vector and q_2_vector
 
         change = true;
@@ -243,8 +243,7 @@ end
 % option = 21: CD method, using q_1_vector and q_2_vector
 %
 % option = 22: CD method, using q_1_vector and q_1_vector/q_2_vector
-%              (my original version)
+%              (original version)
 %
 % option = 23: CD method, using q_1_vector and q_2_vector
-%              (Xiao Guo's version; slower)
 %
