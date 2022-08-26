@@ -7,9 +7,9 @@ All Matlab codes are located in the same directory.
 
 To implement the computation:
 
-(1) run the matlab main code: "demo_quasi_like.m". 
+(1) run the Matlab main code: "demo_quasi_like.m". 
 
-(2) This main code calls for other matlab functions listed below:
+(2) This main code calls for other Matlab functions listed below:
 
 GLM_BD_CD_penalized_parameter_estimate.m                  
 GLM_BD_CD_penalized_parameter_estimate_SCAD.m             
@@ -46,36 +46,36 @@ weight_response_BD.m
 
 ================================= inputs used in the computation =================
 
-For Table 3: run matlab file “demo_quasi_like.m”.
+For Table 1: run Matlab main code “demo_quasi_like.m”.
 input sample size n (100; 200) = 100
 input # (100; 500) of simulations = 500
 
+For “study 1 (raw data without outliers), and non-robust estimation methods”:
 – Input
   input study (1: without contamination; 2: with contamination) = 1
   input index_robust (0: without; 1: with) robust for Y with psi_c = 0
   input index_robust (0: without; 1: with) robust for X with weight = 0
-for “study 1 (raw data without outliers), and non-robust estimation methods”.
 
+For “study 1 (raw data without outliers), and robust estimation methods”:
 – Input
   input study (1: without contamination; 2: with contamination) = 1
   input index_robust (0: without; 1: with) robust for Y with psi_c = 1
   input index_robust (0: without; 1: with) robust for X with weight = 1
-for “study 1 (raw data without outliers), and robust estimation methods”.
 
 ----------------------------------------------------------------------------------
 
-For Table 4: run matlab file “demo_quasi_like.m”.
+For Table 2: run Matlab main code “demo_quasi_like.m”.
 input sample size n (100; 200) = 100
 input # (100; 500) of simulations = 500
 
+For “study 2 (contaminated data with outliers), and non-robust estimation methods”:
 – Input
   input study (1: without contamination; 2: with contamination) = 2
   input index_robust (0: without; 1: with) robust for Y with psi_c = 0
   input index_robust (0: without; 1: with) robust for X with weight = 0
-for “study 2 (contaminated data with outliers), and non-robust estimation methods”.
 
+For “study 2 (contaminated data with outliers), and robust estimation methods”:
 – Input
   input study (1: without contamination; 2: with contamination) = 2
   input index_robust (0: without; 1: with) robust for Y with psi_c = 1
   input index_robust (0: without; 1: with) robust for X with weight = 1
-for “study 2 (contaminated data with outliers), and robust estimation methods”.
