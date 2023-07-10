@@ -2,16 +2,16 @@
 
 ============== Readme description for Matlab codes =============================
 
-This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper "Robust estimation in regression and classification methods for large dimensional data". 
-Matlab codes for all other tables and figures can be similarly and manually adjusted.
+This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper "Robust estimation in regression and classification methods for large dimensional data" by Chunming Zhang, Lixing Zhu, and Yanbo Shen (Machine Learning, 2023, to appear, at https://link.springer.com/article/10.1007/s10994-023-06349-2). 
+Matlab codes for all other tables and figures can be adjusted manually in a similar manner.
 
 All Matlab codes are located in the same directory.
 
 To implement the computation:
 
-(1) run the Matlab main code: "demo_quasi_like.m". 
+(1) Run the Matlab main code: "demo_quasi_like.m".
 
-(2) This main code calls for other Matlab functions listed below:
+(2) This main code calls other Matlab functions listed below:
 
 GLM_BD_CD_penalized_parameter_estimate.m                  
 GLM_BD_CD_penalized_parameter_estimate_SCAD.m             
@@ -50,7 +50,7 @@ weight_response_BD.m
 
 For Table 1: run Matlab main code “demo_quasi_like.m”.
 input sample size n (100; 200) = 100
-input # (100; 500) of simulations = 500
+input number (100; 500) of simulations = 500
 
 For “study 1 (raw data without outliers), and non-robust estimation methods”:
 – Input
