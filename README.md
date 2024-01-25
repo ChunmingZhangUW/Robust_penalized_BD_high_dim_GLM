@@ -2,7 +2,7 @@
 
 ============== Readme description for Matlab codes =============================
 
-This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper "Robust estimation in regression and classification methods for large dimensional data" by Chunming Zhang, Lixing Zhu, and Yanbo Shen (Machine Learning, 2023, to appear, at https://link.springer.com/article/10.1007/s10994-023-06349-2). 
+This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper "Robust estimation in regression and classification methods for large dimensional data" by Chunming Zhang, Lixing Zhu, and Yanbo Shen (Machine Learning, 2023, at https://link.springer.com/article/10.1007/s10994-023-06349-2). 
 Matlab codes for all other tables and figures can be adjusted manually in a similar manner.
 
 All Matlab codes are located in the same directory.
