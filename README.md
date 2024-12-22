@@ -2,19 +2,19 @@
 
 ============== Readme description for Matlab codes =============================
 
-This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies in the paper 
+This is the readme description for producing results (tables, figures) related to the overdispersed Poisson responses in simulation studies presented in the paper:
 
-Zhang, C.M., Zhu, L.X., and Shen, Y.B.(s) (2023). Robust estimation in regression and classification methods for large dimensional data. Machine Learning, 112(9):3361-3411.  [https://link.springer.com/article/10.1007/s10994-023-06349-2]
+Zhang, C.M., Zhu, L.X., and Shen, Y.B. (2023). Robust estimation in regression and classification methods for large dimensional data. Machine Learning, 112(9), 3361–3411. [https://link.springer.com/article/10.1007/s10994-023-06349-2]
 
-Matlab codes for all other tables and figures can be adjusted manually in a similar manner.
+MATLAB codes for all other tables and figures can be adjusted manually in a similar manner.
 
-All Matlab codes are located in the same directory.
+All MATLAB codes are located in the same directory.
 
-To implement the computation:
+Steps to Implement the Computation
 
-(1) Run the Matlab main code: "demo_quasi_like.m".
+(1) Run the MATLAB main code: "demo_quasi_like.m".
 
-(2) This main code calls other Matlab functions listed below:
+(2) This main code calls the following MATLAB functions:
 
 GLM_BD_CD_penalized_parameter_estimate.m                  
 GLM_BD_CD_penalized_parameter_estimate_SCAD.m             
