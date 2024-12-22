@@ -1,4 +1,4 @@
-# Robust_penalized_BD_high_dim_GLM
+# Robust estimation in regression and classification methods for large dimensional data
 
 ============== Readme description for Matlab codes =============================
 
