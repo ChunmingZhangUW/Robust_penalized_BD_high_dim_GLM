@@ -1,6 +1,6 @@
 # Robust estimation in regression and classification methods for large dimensional data
 
-============== Readme description for Matlab codes =============================
+============== README for MATLAB Code =============================
 
 This is the README description for producing results (tables and figures) related to the overdispersed Poisson responses in simulation studies presented in the paper:
 
