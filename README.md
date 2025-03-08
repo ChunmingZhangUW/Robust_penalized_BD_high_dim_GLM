@@ -4,7 +4,7 @@
 
 This is the README description for producing results (tables and figures) related to the overdispersed Poisson responses in simulation studies presented in the paper:
 
-Zhang, C.M., Zhu, L.X., and Shen, Y.B. (2023). Robust estimation in regression and classification methods for large dimensional data. Machine Learning, 112(9), 3361–3411. [https://link.springer.com/article/10.1007/s10994-023-06349-2]
+Zhang, C.M., Zhu, L.X., and Shen, Y.B. (2023). Robust estimation in regression and classification methods for large dimensional data. Machine Learning, 112(9), 3361–3411. [https://doi.org/10.1007/s10994-023-06349-2]
 
 MATLAB codes for all other tables and figures can be adjusted manually in a similar manner.
 
